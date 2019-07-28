@@ -1,0 +1,15 @@
+<div class="container">
+  <app-cockpit (serverCreated)="onServerAdded($event)" (blueprintCreated)="onBlueprintAdded($event)"></app-cockpit>
+  <div class="row">
+
+    <div class="col-xs-12">
+      <br>
+      <button class="btn btn-primary" (click)="onChange()">Onchange</button>
+      <button class="btn btn-danger" (click)="onDestory()">OnDestory</button>
+
+      <app-server *ngFor="let server of serverElements" [serElement]='server' [name]='server.name'>
+        <p>other content</p>
+      </app-server>
+
+    </div>
+  </div>
